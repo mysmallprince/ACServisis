@@ -24,6 +24,7 @@ namespace AC_Servis
 
         }
 
+        
         public MySqlConnection GetConnection()
         {
             return connection;

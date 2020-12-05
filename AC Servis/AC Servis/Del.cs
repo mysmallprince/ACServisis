@@ -44,6 +44,12 @@ namespace AC_Servis
             this.Hide();
             Menu mainMenu = new Menu();
             mainMenu.Show();
+            mainMenu.id.Text = id;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

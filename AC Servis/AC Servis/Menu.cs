@@ -17,7 +17,6 @@ namespace AC_Servis
         public Menu()
         {
             InitializeComponent();
-            id.Text = id2;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,12 +24,10 @@ namespace AC_Servis
             this.Hide();
             Zapic zapicFrom = new Zapic();
             zapicFrom.Show();
+            zapicFrom.label9.Text = id.Text;
+            zapicFrom.id8 = id.Text;
         }
 
-        private void id_Enter(object sender, EventArgs e)
-        {
-            
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -54,6 +51,18 @@ namespace AC_Servis
             Profile profileForm = new Profile();
             profileForm.Show();
             profileForm.id1 = id.Text;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

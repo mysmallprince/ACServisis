@@ -33,6 +33,7 @@ namespace AC_Servis
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.bRegister = new System.Windows.Forms.Button();
             this.OtcheU = new System.Windows.Forms.TextBox();
             this.FamilU = new System.Windows.Forms.TextBox();
@@ -44,7 +45,7 @@ namespace AC_Servis
             this.label3 = new System.Windows.Forms.Label();
             this.loginReg = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +53,7 @@ namespace AC_Servis
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -93,6 +95,16 @@ namespace AC_Servis
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(372, 450);
             this.panel1.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(141, 107);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 13);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Уже есть аккаунт?";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // bRegister
             // 
@@ -224,15 +236,18 @@ namespace AC_Servis
             this.label2.Text = "Логин";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label7
+            // label8
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(141, 107);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Уже есть аккаунт?";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(341, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(19, 18);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "X";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // Register
             // 
@@ -240,6 +255,7 @@ namespace AC_Servis
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 450);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Register";
             this.Text = "Register";
             this.panel2.ResumeLayout(false);
@@ -267,5 +283,6 @@ namespace AC_Servis
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

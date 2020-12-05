@@ -55,5 +55,10 @@ namespace AC_Servis
             Register registerFrom = new Register();
             registerFrom.Show();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

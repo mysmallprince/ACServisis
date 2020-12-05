@@ -69,7 +69,12 @@ namespace AC_Servis
             db.openConnection();
 
             if (command.ExecuteNonQuery() == 1)
+            {
                 MessageBox.Show("Аккаунт был создан");
+                this.Hide();
+                Login debil = new Login();
+                debil.Show();
+            }
             else
                 MessageBox.Show("Аккаунт не был создан");
 
@@ -104,6 +109,11 @@ namespace AC_Servis
             this.Hide();
             Login loginfrom = new Login();
             loginfrom.Show();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

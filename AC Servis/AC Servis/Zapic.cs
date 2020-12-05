@@ -13,6 +13,7 @@ namespace AC_Servis
 {
     public partial class Zapic : Form
     {
+        public string id8;
         public Zapic()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace AC_Servis
             MySqlCommand command = new MySqlCommand("INSERT INTO `zapic` (`nameZ`, `uid`, `vidwork`, `mark`, `date`) VALUES (@naz, @id, @vid, @marka, @data)", db.GetConnection());
 
             command.Parameters.Add("@naz", MySqlDbType.VarChar).Value = nazv.Text;
-            command.Parameters.Add("@id", MySqlDbType.VarChar).Value = id.Text;
+            command.Parameters.Add("@id", MySqlDbType.VarChar).Value = label9.Text;
             command.Parameters.Add("@vid", MySqlDbType.VarChar).Value = vidrab.Text;
             command.Parameters.Add("@marka", MySqlDbType.VarChar).Value = marka.Text;
             command.Parameters.Add("@data", MySqlDbType.VarChar).Value = data.Text;
@@ -43,10 +44,11 @@ namespace AC_Servis
                 this.Hide();
                 Menu mainMenu = new Menu();
                 mainMenu.Show();
+                mainMenu.id.Text = id8;
+
             }
             else
                 MessageBox.Show("Нет мест");
-
             db.closeConnection();
         }
 
@@ -65,6 +67,7 @@ namespace AC_Servis
             adapter.SelectCommand = command;
             adapter.Fill(dataTable);
 
+
             if (dataTable.Rows.Count > 0)
             {
                 MessageBox.Show("Такой заказ уже есть, введите другой");
@@ -80,6 +83,12 @@ namespace AC_Servis
             this.Hide();
             Menu mainMenu = new Menu();
             mainMenu.Show();
+            mainMenu.id.Text = id8;
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

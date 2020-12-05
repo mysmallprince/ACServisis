@@ -13,17 +13,12 @@ namespace AC_Servis
 {
     public partial class Izmen : Form
     {
-        private MySqlConnection datatable;
         public string id;
         public Izmen()
         {
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -32,7 +27,7 @@ namespace AC_Servis
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("Update `zapic` set `vidwork` =@new , `date` =@srok  where id = @id", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("Update `zapic` set `vidwork` =@new , `date` =@srok  where uid = @id", db.GetConnection());
             
 
         
@@ -60,6 +55,12 @@ namespace AC_Servis
             this.Hide();
             Menu mainMenu = new Menu();
             mainMenu.Show();
+            mainMenu.id.Text = id;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

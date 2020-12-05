@@ -40,6 +40,8 @@ namespace AC_Servis
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +49,7 @@ namespace AC_Servis
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -70,6 +73,7 @@ namespace AC_Servis
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.id);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel3);
@@ -92,7 +96,6 @@ namespace AC_Servis
             this.id.Size = new System.Drawing.Size(35, 13);
             this.id.TabIndex = 3;
             this.id.Text = "label3";
-            this.id.Enter += new System.EventHandler(this.id_Enter);
             // 
             // label2
             // 
@@ -154,12 +157,36 @@ namespace AC_Servis
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(12, 420);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(109, 27);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Выход из записи";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(895, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(19, 18);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "X";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 450);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Menu";
             this.Text = "Menu";
             this.panel2.ResumeLayout(false);
@@ -182,5 +209,7 @@ namespace AC_Servis
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Label id;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label3;
     }
 }

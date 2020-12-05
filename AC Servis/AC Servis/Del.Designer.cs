@@ -33,10 +33,11 @@ namespace AC_Servis
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -44,6 +45,7 @@ namespace AC_Servis
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -78,6 +80,17 @@ namespace AC_Servis
             this.panel1.Size = new System.Drawing.Size(889, 450);
             this.panel1.TabIndex = 5;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(780, 419);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 22);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Вернуться";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(387, 292);
@@ -108,16 +121,18 @@ namespace AC_Servis
             this.textBox1.Size = new System.Drawing.Size(169, 25);
             this.textBox1.TabIndex = 1;
             // 
-            // label7
+            // label3
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(780, 419);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 22);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Вернуться";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(867, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(19, 18);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "X";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Del
             // 
@@ -125,6 +140,7 @@ namespace AC_Servis
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 450);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Del";
             this.Text = "Form1";
             this.panel2.ResumeLayout(false);
@@ -144,5 +160,6 @@ namespace AC_Servis
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label3;
     }
 }
