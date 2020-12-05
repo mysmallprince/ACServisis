@@ -52,6 +52,7 @@ namespace AC_Servis
             Profile profileForm = new Profile();
             profileForm.Show();
             profileForm.id1 = id.Text;
+            profileForm.ad = admin;
         }
 
         private void button5_Click(object sender, EventArgs e)

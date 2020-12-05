@@ -95,3 +95,7 @@ C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC Servis.e
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC Servis.pdb
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.AdminPanel.resources
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.MenZakazi.resources
+C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.AvtoMesh.resources
+C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.Avtomeshlist.resources
+C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.Viplata.resources
+C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.VzyatZakaz.resources

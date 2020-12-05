@@ -28,7 +28,7 @@ namespace AC_Servis
 
             DB db = new DB();
 
-            MySqlCommand command = new MySqlCommand("INSERT INTO `zapic` (`nameZ`, `uid`, `vidwork`, `mark`, `date`) VALUES (@naz, @id, @vid, @marka, @data)", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO `zapic` (`nameZ`, `uid`, `vidwork`, `mark`, `date`, `idAv`, `nameAv`) VALUES (@naz, @id, @vid, @marka, @data,'0','0')", db.GetConnection());
 
             command.Parameters.Add("@naz", MySqlDbType.VarChar).Value = nazv.Text;
             command.Parameters.Add("@id", MySqlDbType.VarChar).Value = label9.Text;

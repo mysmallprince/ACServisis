@@ -37,6 +37,7 @@ namespace AC_Servis
             MenZakazi zakazi = new MenZakazi();
             zakazi.Show();
             zakazi.id1 = id.Text;
+            zakazi.ad = admin;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -44,8 +45,27 @@ namespace AC_Servis
             this.Hide();
             Profile profile = new Profile();
             profile.Show();
-            profile.admin = admin;
+            profile.ad = admin;
             profile.id1 = id.Text;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Avtomeshlist avtomeshlist = new Avtomeshlist();
+            avtomeshlist.Show();
+            avtomeshlist.id = id.Text;
+            avtomeshlist.ad = admin;
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Viplata viplata = new Viplata();
+            viplata.Show();
+            viplata.id = id.Text;
+            viplata.ad = admin;
         }
     }
 }

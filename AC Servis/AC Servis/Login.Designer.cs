@@ -85,7 +85,7 @@ namespace AC_Servis
             this.passField.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passField.Location = new System.Drawing.Point(130, 192);
             this.passField.Name = "passField";
-            this.passField.PasswordChar = '♥';
+            this.passField.PasswordChar = '♞';
             this.passField.Size = new System.Drawing.Size(160, 30);
             this.passField.TabIndex = 1;
             // 

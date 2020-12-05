@@ -13,6 +13,7 @@ namespace AC_Servis
 {
     public partial class MenZakazi : Form
     {
+        public string ad;
         public string id1;
         public string id;
         public MenZakazi()
@@ -47,13 +48,15 @@ namespace AC_Servis
             List<string[]> data = new List<string[]>();
             while (reader.Read())
             {
-                data.Add(new string[6]);
+                data.Add(new string[8]);
                 data[data.Count - 1][0] = reader[0].ToString();
                 data[data.Count - 1][1] = reader[1].ToString();
                 data[data.Count - 1][2] = reader[2].ToString();
                 data[data.Count - 1][3] = reader[3].ToString();
                 data[data.Count - 1][4] = reader[4].ToString();
                 data[data.Count - 1][5] = reader[5].ToString();
+                data[data.Count - 1][6] = reader[6].ToString();
+                data[data.Count - 1][7] = reader[7].ToString();
             }
             reader.Close();
             foreach (string[] s in data)
@@ -130,6 +133,7 @@ namespace AC_Servis
             AdminPanel adminPanel = new AdminPanel();
             adminPanel.Show();
             adminPanel.id.Text = id1;
+            adminPanel.admin = ad;
         }
 
     }

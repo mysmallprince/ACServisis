@@ -47,26 +47,25 @@ namespace AC_Servis
                 Menu mainForm = new Menu();
                 mainForm.Show();
                 mainForm.id.Text = table.Rows[0][0].ToString();
-                AdminPanel profile = new AdminPanel();
-                profile.admin = table.Rows[0][6].ToString();
+                mainForm.admin = table.Rows[0][6].ToString();
             }
+
             else if (table.Rows.Count > 0 && admin == "1")
                 {
                 this.Hide();
                 AdminPanel adminchik = new AdminPanel();
                 adminchik.Show();
                 adminchik.id.Text = table.Rows[0][0].ToString();
-                AdminPanel profile = new AdminPanel();
-                profile.admin = table.Rows[0][6].ToString();
+                adminchik.admin = table.Rows[0][6].ToString();
                 }
             else if (table.Rows.Count > 0 && admin == "2")
             {
                 this.Hide();
-                AdminPanel adminchik = new AdminPanel();
-                adminchik.Show();
-                adminchik.id.Text = table.Rows[0][0].ToString();
-                AdminPanel profile = new AdminPanel();
-                profile.admin = table.Rows[0][6].ToString();
+                AvtoMesh adminc = new AvtoMesh();
+                adminc.Show();
+                adminc.id.Text = table.Rows[0][0].ToString();
+                adminc.admin = table.Rows[0][6].ToString();
+                adminc.nameAv = table.Rows[0][3].ToString();
             }
             else
                 MessageBox.Show("No");
