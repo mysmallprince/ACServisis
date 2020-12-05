@@ -13,6 +13,7 @@ namespace AC_Servis
 {
     public partial class Login : Form
     {
+        public string admin;
         public Login()
         {
             InitializeComponent();
@@ -38,12 +39,34 @@ namespace AC_Servis
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
-            if (table.Rows.Count > 0)
+            admin = table.Rows[0][6].ToString();
+
+            if (table.Rows.Count > 0 && admin == "0")
             {
                 this.Hide();
                 Menu mainForm = new Menu();
                 mainForm.Show();
                 mainForm.id.Text = table.Rows[0][0].ToString();
+                AdminPanel profile = new AdminPanel();
+                profile.admin = table.Rows[0][6].ToString();
+            }
+            else if (table.Rows.Count > 0 && admin == "1")
+                {
+                this.Hide();
+                AdminPanel adminchik = new AdminPanel();
+                adminchik.Show();
+                adminchik.id.Text = table.Rows[0][0].ToString();
+                AdminPanel profile = new AdminPanel();
+                profile.admin = table.Rows[0][6].ToString();
+                }
+            else if (table.Rows.Count > 0 && admin == "2")
+            {
+                this.Hide();
+                AdminPanel adminchik = new AdminPanel();
+                adminchik.Show();
+                adminchik.id.Text = table.Rows[0][0].ToString();
+                AdminPanel profile = new AdminPanel();
+                profile.admin = table.Rows[0][6].ToString();
             }
             else
                 MessageBox.Show("No");

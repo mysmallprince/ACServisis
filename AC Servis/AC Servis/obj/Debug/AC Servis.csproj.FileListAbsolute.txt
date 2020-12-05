@@ -93,3 +93,5 @@ C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC Servis.c
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC Servis.csproj.CopyComplete
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC Servis.exe
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC Servis.pdb
+C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.AdminPanel.resources
+C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.MenZakazi.resources

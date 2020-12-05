@@ -38,8 +38,8 @@ namespace AC_Servis
             this.loginField = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -84,9 +84,9 @@ namespace AC_Servis
             // 
             this.passField.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passField.Location = new System.Drawing.Point(130, 192);
-            this.passField.Multiline = true;
             this.passField.Name = "passField";
-            this.passField.Size = new System.Drawing.Size(160, 27);
+            this.passField.PasswordChar = '♥';
+            this.passField.Size = new System.Drawing.Size(160, 30);
             this.passField.TabIndex = 1;
             // 
             // label3
@@ -135,19 +135,6 @@ namespace AC_Servis
             this.panel2.Size = new System.Drawing.Size(329, 100);
             this.panel2.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Matura MT Script Capitals", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(36, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 49);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Авторизация";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -160,6 +147,19 @@ namespace AC_Servis
             this.label5.TabIndex = 2;
             this.label5.Text = "X";
             this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Matura MT Script Capitals", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(36, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(281, 49);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Авторизация";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Login
             // 

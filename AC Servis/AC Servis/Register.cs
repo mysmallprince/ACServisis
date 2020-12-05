@@ -58,13 +58,14 @@ namespace AC_Servis
 
 
             DB db = new DB();
-            MySqlCommand command = new MySqlCommand("INSERT INTO `users` (`login`, `pass`, `Name`, `Famil`, `Otche`) VALUES (@login, @pass, @name, @famil, @otche)", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO `users` (`login`, `pass`, `Name`, `Famil`, `Otche`,`Admin`) VALUES (@login, @pass, @name, @famil, @otche, @Admin)", db.GetConnection());
 
             command.Parameters.Add("@login",MySqlDbType.VarChar).Value = loginReg.Text;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = passReg.Text;
             command.Parameters.Add("@Name", MySqlDbType.VarChar).Value = NameU.Text;
             command.Parameters.Add("@Famil", MySqlDbType.VarChar).Value = FamilU.Text;
             command.Parameters.Add("@Otche", MySqlDbType.VarChar).Value = OtcheU.Text;
+            command.Parameters.Add("@Admin", MySqlDbType.VarChar).Value = Admin.Text;
 
             db.openConnection();
 

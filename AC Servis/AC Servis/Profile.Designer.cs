@@ -31,6 +31,7 @@ namespace AC_Servis
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@ namespace AC_Servis
             this.label3 = new System.Windows.Forms.Label();
             this.nazv = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +60,19 @@ namespace AC_Servis
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(923, 100);
             this.panel2.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(901, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(19, 18);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "X";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label1
             // 
@@ -217,19 +230,6 @@ namespace AC_Servis
             this.label2.Size = new System.Drawing.Size(83, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Логин";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(901, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(19, 18);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "X";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // Profile
             // 

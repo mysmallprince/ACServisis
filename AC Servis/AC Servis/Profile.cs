@@ -13,6 +13,7 @@ namespace AC_Servis
 {
     public partial class Profile : Form
     {
+        public string admin;
         public string id1;
         public Profile()
         {
@@ -45,15 +46,32 @@ namespace AC_Servis
 
         private void label7_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Menu mainMenu = new Menu();
-            mainMenu.Show();
-            mainMenu.id.Text = id1;
+            if (admin == "0")
+            {
+                this.Hide();
+                Menu mainMenu = new Menu();
+                mainMenu.Show();
+                mainMenu.id.Text = id1;
+                mainMenu.admin = admin;
+            }
+
+            else if (admin == "1")
+            {
+                this.Hide();
+                AdminPanel adminPanel = new AdminPanel();
+                adminPanel.Show();
+                adminPanel.id.Text = id1;
+                adminPanel.admin = admin;
+            }
+            else
+                MessageBox.Show("Вы даун");
         }
 
         private void label8_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+
     }
 }

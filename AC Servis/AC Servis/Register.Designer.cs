@@ -31,6 +31,7 @@ namespace AC_Servis
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,7 +46,7 @@ namespace AC_Servis
             this.label3 = new System.Windows.Forms.Label();
             this.loginReg = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.Admin = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +61,19 @@ namespace AC_Servis
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(372, 100);
             this.panel2.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(341, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(19, 18);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "X";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label1
             // 
@@ -77,8 +91,9 @@ namespace AC_Servis
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.bRegister);
+            this.panel1.Controls.Add(this.Admin);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.OtcheU);
             this.panel1.Controls.Add(this.FamilU);
             this.panel1.Controls.Add(this.NameU);
@@ -236,18 +251,15 @@ namespace AC_Servis
             this.label2.Text = "Логин";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label8
+            // Admin
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(341, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(19, 18);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "X";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.Admin.AutoSize = true;
+            this.Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Admin.Location = new System.Drawing.Point(240, 405);
+            this.Admin.Name = "Admin";
+            this.Admin.Size = new System.Drawing.Size(5, 5);
+            this.Admin.TabIndex = 4;
+            this.Admin.Text = "0";
             // 
             // Register
             // 
@@ -284,5 +296,6 @@ namespace AC_Servis
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label Admin;
     }
 }

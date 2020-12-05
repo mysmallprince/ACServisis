@@ -13,6 +13,7 @@ namespace AC_Servis
 {
     public partial class Menu : Form
     {
+        public string admin;
         public string id2;
         public Menu()
         {
