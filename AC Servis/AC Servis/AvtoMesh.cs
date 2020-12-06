@@ -76,6 +76,7 @@ namespace AC_Servis
             profile.Show();
             profile.ad = admin;
             profile.id1 = id.Text;
+            profile.nameAv = nameAv;
         }
     }
 }

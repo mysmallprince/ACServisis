@@ -110,6 +110,8 @@ namespace AC_Servis
             command.Parameters.Add("@adVu", MySqlDbType.VarChar).Value = id;
             command.Parameters.Add("@stat", MySqlDbType.VarChar).Value = 1;
 
+            
+
             db.openConnection();
             if (command.ExecuteNonQuery() == 1)
             {

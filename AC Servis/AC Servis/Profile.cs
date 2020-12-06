@@ -13,6 +13,7 @@ namespace AC_Servis
 {
     public partial class Profile : Form
     {
+        public string nameAv;
         public string ad;
         public string id1;
         public Profile()
@@ -70,6 +71,7 @@ namespace AC_Servis
                 avto.Show();
                 avto.id.Text = id1;
                 avto.admin = ad;
+                avto.nameAv = nameAv;
             }
             else
                 MessageBox.Show("Вы даун");
