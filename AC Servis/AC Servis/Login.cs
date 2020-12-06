@@ -13,6 +13,7 @@ namespace AC_Servis
 {
     public partial class Login : Form
     {
+        public string lol;
         public string admin;
         public Login()
         {
@@ -32,15 +33,20 @@ namespace AC_Servis
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login`=@uL AND `pass`=@uP", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login`=@uL AND `pass`=@uP AND `Admin` != 'NULL'", db.GetConnection());
             command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
             command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passUser;
+            
+            
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
-
+            if (table.Rows.Count == 0)
+            {
+                MessageBox.Show("Ты чё дебил, зарегайся");
+                return;
+            }
             admin = table.Rows[0][6].ToString();
-
             if (table.Rows.Count > 0 && admin == "0")
             {
                 this.Hide();
@@ -51,13 +57,13 @@ namespace AC_Servis
             }
 
             else if (table.Rows.Count > 0 && admin == "1")
-                {
+            {
                 this.Hide();
                 AdminPanel adminchik = new AdminPanel();
                 adminchik.Show();
                 adminchik.id.Text = table.Rows[0][0].ToString();
                 adminchik.admin = table.Rows[0][6].ToString();
-                }
+            }
             else if (table.Rows.Count > 0 && admin == "2")
             {
                 this.Hide();
@@ -68,7 +74,13 @@ namespace AC_Servis
                 adminc.nameAv = table.Rows[0][3].ToString();
             }
             else
+            {
                 MessageBox.Show("No");
+            }
+
+            
+
+
         }
 
         private void label4_Click(object sender, EventArgs e)

@@ -31,8 +31,10 @@ namespace AC_Servis
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -40,8 +42,7 @@ namespace AC_Servis
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +57,19 @@ namespace AC_Servis
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(916, 100);
             this.panel2.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(895, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(19, 18);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "X";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label1
             // 
@@ -77,6 +91,7 @@ namespace AC_Servis
             this.panel1.Controls.Add(this.id);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -87,6 +102,16 @@ namespace AC_Servis
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(916, 450);
             this.panel1.TabIndex = 2;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(12, 420);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(109, 27);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Выход из записи";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // id
             // 
@@ -157,28 +182,16 @@ namespace AC_Servis
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button5
+            // button6
             // 
-            this.button5.Location = new System.Drawing.Point(12, 420);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(109, 27);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Выход из записи";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(895, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 18);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "X";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button6.Location = new System.Drawing.Point(318, 379);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(300, 43);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "Мои заказы";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Menu
             // 
@@ -211,5 +224,6 @@ namespace AC_Servis
         public System.Windows.Forms.Label id;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button6;
     }
 }

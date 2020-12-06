@@ -37,8 +37,6 @@ namespace AC_Servis
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +44,8 @@ namespace AC_Servis
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -143,28 +143,6 @@ namespace AC_Servis
             this.dataGridView1.Size = new System.Drawing.Size(643, 355);
             this.dataGridView1.TabIndex = 9;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(12, 419);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 22);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Обновить";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(856, 419);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 22);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Вернуться";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "id";
@@ -199,6 +177,28 @@ namespace AC_Servis
             // 
             this.Column7.HeaderText = "Admin";
             this.Column7.Name = "Column7";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(12, 419);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 22);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Обновить";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(856, 419);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 22);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Вернуться";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // Avtomeshlist
             // 

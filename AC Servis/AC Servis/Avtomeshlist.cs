@@ -35,6 +35,12 @@ namespace AC_Servis
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
+            if(table.Rows.Count == 0)
+            {
+                MessageBox.Show("Никого нету");
+                return;
+            }
+
             db.openConnection();
             MySqlDataReader reader = command.ExecuteReader();
             List<string[]> data = new List<string[]>();

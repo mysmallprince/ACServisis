@@ -80,6 +80,30 @@ namespace AC_Servis
             Application.Exit();
         }
 
+        private void udal_Click(object sender, EventArgs e)
+        {
 
+            DB db = new DB();
+            DataTable table = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("DELETE FROM `users` WHERE `id`=@id", db.GetConnection());
+            command.Parameters.Add("@id", MySqlDbType.VarChar).Value = id1;
+            db.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("Ваш профиль успешно удален");
+                this.Hide();
+                Login login = new Login();
+                login.Show();
+
+            }
+
+            else
+                MessageBox.Show("Ошибка");
+
+            db.closeConnection();
+        }
     }
 }

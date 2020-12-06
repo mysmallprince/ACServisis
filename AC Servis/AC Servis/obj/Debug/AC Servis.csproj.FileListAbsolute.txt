@@ -99,3 +99,4 @@ C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.A
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.Avtomeshlist.resources
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.Viplata.resources
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.VzyatZakaz.resources
+C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.Moizakazi.resources

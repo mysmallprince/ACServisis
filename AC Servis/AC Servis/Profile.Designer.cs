@@ -46,6 +46,7 @@ namespace AC_Servis
             this.label3 = new System.Windows.Forms.Label();
             this.nazv = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.udal = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +91,7 @@ namespace AC_Servis
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.udal);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.data);
@@ -231,6 +233,17 @@ namespace AC_Servis
             this.label2.TabIndex = 1;
             this.label2.Text = "Логин";
             // 
+            // udal
+            // 
+            this.udal.AutoSize = true;
+            this.udal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.udal.Location = new System.Drawing.Point(23, 413);
+            this.udal.Name = "udal";
+            this.udal.Size = new System.Drawing.Size(158, 22);
+            this.udal.TabIndex = 4;
+            this.udal.Text = "Удалить профиль";
+            this.udal.Click += new System.EventHandler(this.udal_Click);
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,5 +279,6 @@ namespace AC_Servis
         private System.Windows.Forms.TextBox nazv;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label udal;
     }
 }

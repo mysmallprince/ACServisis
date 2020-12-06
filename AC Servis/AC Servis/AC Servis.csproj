@@ -99,6 +99,12 @@
     <Compile Include="MenZakazi.Designer.cs">
       <DependentUpon>MenZakazi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Moizakazi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moizakazi.Designer.cs">
+      <DependentUpon>Moizakazi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenZakazi.resx">
       <DependentUpon>MenZakazi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moizakazi.resx">
+      <DependentUpon>Moizakazi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>

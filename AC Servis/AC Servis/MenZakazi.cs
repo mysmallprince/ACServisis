@@ -40,7 +40,11 @@ namespace AC_Servis
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
-            
+            if (table.Rows.Count == 1)
+            {
+                MessageBox.Show("Пусто");
+                return;
+            }
             id = table.Rows[0][0].ToString();
 
             db.openConnection();

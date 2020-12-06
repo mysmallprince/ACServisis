@@ -66,5 +66,14 @@ namespace AC_Servis
         {
             Application.Exit();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Moizakazi moizakazi = new Moizakazi();
+            moizakazi.Show();
+            moizakazi.id = id.Text;
+            moizakazi.ad = admin;
+        }
     }
 }
