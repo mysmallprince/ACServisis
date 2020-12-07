@@ -13,7 +13,8 @@ namespace AC_Servis
 {
     public partial class Del : Form
     {
-
+        public string valll;
+        public string admin;
         public string id;
         public Del()
         {
@@ -45,6 +46,7 @@ namespace AC_Servis
             Menu mainMenu = new Menu();
             mainMenu.Show();
             mainMenu.id.Text = id;
+            mainMenu.Valutka.Text = valll;
         }
 
         private void label3_Click(object sender, EventArgs e)

@@ -42,6 +42,7 @@ namespace AC_Servis
             vzyat.id = id.Text;
             vzyat.ad = admin;
             vzyat.nameAv = nameAv;
+            vzyat.valll = Valutka.Text;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -77,6 +78,7 @@ namespace AC_Servis
             profile.ad = admin;
             profile.id1 = id.Text;
             profile.nameAv = nameAv;
+            profile.valll = Valutka.Text;
         }
     }
 }

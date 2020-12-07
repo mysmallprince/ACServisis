@@ -13,6 +13,7 @@ namespace AC_Servis
 {
     public partial class VzyatZakaz : Form
     {
+        public string valll;
         public string nameAv;
         public string id;
         public string ad;
@@ -33,6 +34,7 @@ namespace AC_Servis
             avto.Show();
             avto.id.Text = id;
             avto.admin = ad;
+            avto.Valutka.Text = valll;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -52,7 +54,7 @@ namespace AC_Servis
             DataTable table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `zapic` WHERE `idAV`='0' AND `nameAv` = '0'", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `zapic` WHERE `idAV`='0' AND `nameAv` = '0' AND `Status` = '1'", db.GetConnection());
 
 
             adapter.SelectCommand = command;
@@ -69,7 +71,7 @@ namespace AC_Servis
             List<string[]> data = new List<string[]>();
             while (reader.Read())
             {
-                data.Add(new string[8]);
+                data.Add(new string[9]);
                 data[data.Count - 1][0] = reader[0].ToString();
                 data[data.Count - 1][1] = reader[1].ToString();
                 data[data.Count - 1][2] = reader[2].ToString();
@@ -78,6 +80,7 @@ namespace AC_Servis
                 data[data.Count - 1][5] = reader[5].ToString();
                 data[data.Count - 1][6] = reader[6].ToString();
                 data[data.Count - 1][7] = reader[7].ToString();
+                data[data.Count - 1][8] = reader[9].ToString();
             }
 
             reader.Close();
@@ -108,7 +111,7 @@ namespace AC_Servis
             command.Parameters.Add("@namz", MySqlDbType.VarChar).Value = id;
             command.Parameters.Add("@vidwork", MySqlDbType.VarChar).Value = nameAv;
             command.Parameters.Add("@adVu", MySqlDbType.VarChar).Value = id;
-            command.Parameters.Add("@stat", MySqlDbType.VarChar).Value = 1;
+            command.Parameters.Add("@stat", MySqlDbType.VarChar).Value = 2;
 
             
 
@@ -122,6 +125,7 @@ namespace AC_Servis
                 avto.id.Text = id;
                 avto.nameAv = nameAv;
                 avto.admin = ad;
+                avto.Valutka.Text = valll;
 
             }
 
@@ -238,7 +242,7 @@ namespace AC_Servis
             MySqlCommand command = new MySqlCommand("UPDATE `zapic` set `idAv`='0', `Payment`=@namz, `Status`=@vidwork WHERE `id`=@id", db.GetConnection());
             command.Parameters.Add("@id", MySqlDbType.VarChar).Value = row.Cells[0].Value.ToString();
             command.Parameters.Add("@namz", MySqlDbType.VarChar).Value = textBox1.Text;
-            command.Parameters.Add("@vidwork", MySqlDbType.VarChar).Value = 2;
+            command.Parameters.Add("@vidwork", MySqlDbType.VarChar).Value = 3;
             
 
             db.openConnection();
@@ -251,6 +255,7 @@ namespace AC_Servis
                 avto.id.Text = id;
                 avto.nameAv = nameAv;
                 avto.admin = ad;
+                avto.Valutka.Text = valll;
 
             }
 
@@ -259,6 +264,7 @@ namespace AC_Servis
 
             db.closeConnection();
         }
+
     }
     
     

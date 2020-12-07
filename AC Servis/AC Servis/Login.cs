@@ -54,6 +54,7 @@ namespace AC_Servis
                 mainForm.Show();
                 mainForm.id.Text = table.Rows[0][0].ToString();
                 mainForm.admin = table.Rows[0][6].ToString();
+                mainForm.Valutka.Text = table.Rows[0][7].ToString();
             }
 
             else if (table.Rows.Count > 0 && admin == "1")
@@ -63,6 +64,7 @@ namespace AC_Servis
                 adminchik.Show();
                 adminchik.id.Text = table.Rows[0][0].ToString();
                 adminchik.admin = table.Rows[0][6].ToString();
+                adminchik.Valutka.Text = table.Rows[0][7].ToString();
             }
             else if (table.Rows.Count > 0 && admin == "2")
             {
@@ -72,6 +74,7 @@ namespace AC_Servis
                 adminc.id.Text = table.Rows[0][0].ToString();
                 adminc.admin = table.Rows[0][6].ToString();
                 adminc.nameAv = table.Rows[0][3].ToString();
+                adminc.Valutka.Text = table.Rows[0][7].ToString();
             }
             else
             {

@@ -13,6 +13,7 @@ namespace AC_Servis
 {
     public partial class Moizakazi : Form
     {
+        public string valll;
         public string idAv;
         public string hern;
         public string values;
@@ -36,6 +37,7 @@ namespace AC_Servis
             mainMenu.Show();
             mainMenu.id.Text = id;
             mainMenu.admin = ad;
+            mainMenu.Valutka.Text = valll;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -48,13 +50,13 @@ namespace AC_Servis
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             MySqlCommand command = new MySqlCommand("SELECT * FROM `zapic` WHERE `uid`=@ad", db.GetConnection());
             command.Parameters.Add("@ad", MySqlDbType.VarChar).Value = id;
-            
+
 
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
-            
+
 
             if (table.Rows.Count == 0)
             {
@@ -72,7 +74,7 @@ namespace AC_Servis
             List<string[]> data = new List<string[]>();
             while (reader.Read())
             {
-                data.Add(new string[7]);
+                data.Add(new string[8]);
                 data[data.Count - 1][0] = reader[0].ToString();
                 data[data.Count - 1][1] = reader[2].ToString();
                 data[data.Count - 1][2] = reader[1].ToString();
@@ -80,6 +82,7 @@ namespace AC_Servis
                 data[data.Count - 1][4] = reader[10].ToString();
                 data[data.Count - 1][5] = reader[7].ToString();
                 data[data.Count - 1][6] = reader[9].ToString();
+                data[data.Count - 1][7] = reader[11].ToString();
             }
             reader.Close();
             foreach (string[] s in data)
@@ -108,8 +111,8 @@ namespace AC_Servis
             command.Parameters.Add("@id", MySqlDbType.VarChar).Value = row.Cells[4].Value.ToString();
             command.Parameters.Add("@val", MySqlDbType.VarChar).Value = row.Cells[2].Value.ToString();
 
-            
-            
+
+
 
             db.openConnection();
             if (command.ExecuteNonQuery() == 1)
@@ -150,8 +153,8 @@ namespace AC_Servis
 
         private void label6_Click(object sender, EventArgs e)
         {
-            
-            
+
+
             DataGridViewRow row = dataGridView1.CurrentRow;
 
             DB db = new DB();
@@ -165,15 +168,44 @@ namespace AC_Servis
 
             status = row.Cells[6].Value.ToString();
 
+            if (status == "2")
+            {
+                MessageBox.Show("Этот заказ нельзя оплатить");
+                if (label5.Visible == false)
+                    label5.Visible = true;
+                if (label2.Visible == false)
+                    label2.Visible = true;
+                if (label6.Visible == true)
+                    label6.Visible = false;
+                if (label8.Visible == true)
+                    label8.Visible = false;
+                return;
+            }
 
             if (status == "1")
             {
                 MessageBox.Show("Этот заказ нельзя оплатить");
+                if (label5.Visible == false)
+                    label5.Visible = true;
+                if (label2.Visible == false)
+                    label2.Visible = true;
+                if (label6.Visible == true)
+                    label6.Visible = false;
+                if (label8.Visible == true)
+                    label8.Visible = false;
                 return;
             }
             if (status == "0")
             {
                 MessageBox.Show("Этот заказ нельзя оплатить");
+                if (label5.Visible == false)
+                    label5.Visible = true;
+                if (label2.Visible == false)
+                    label2.Visible = true;
+                if (label6.Visible == true)
+                    label6.Visible = false;
+                if (label8.Visible == true)
+                    label8.Visible = false;
                 return;
             }
 
@@ -187,17 +219,18 @@ namespace AC_Servis
             else
                 MessageBox.Show("Ошибка");
 
-            
 
 
-            
 
-            MySqlCommand ccommand = new MySqlCommand("UPDATE `users` set `Valutka`=@val  WHERE `id`=@id", db.GetConnection());
-            ccommand.Parameters.Add("@id", MySqlDbType.VarChar).Value = idAv;
-            ccommand.Parameters.Add("@val", MySqlDbType.VarChar).Value = row.Cells[3].Value.ToString() ;
+
+
+            MySqlCommand ccommand = new MySqlCommand("UPDATE `users` set `Valutka`=`Valutka`+((@val*90)/100)  WHERE `id`=@id", db.GetConnection());
+            ccommand.Parameters.Add("@id", MySqlDbType.VarChar).Value = row.Cells[7].Value.ToString();
+            ccommand.Parameters.Add("@val", MySqlDbType.VarChar).Value = row.Cells[3].Value.ToString();
+
             if (status == "2")
             {
-
+                return;
             }
             if (status == "1")
             {
@@ -206,51 +239,118 @@ namespace AC_Servis
             if (status == "0")
                 return;
 
-            
+
             if (ccommand.ExecuteNonQuery() == 1)
             {
-                
+
 
             }
 
             else
                 MessageBox.Show("Ошибка");
 
-            
 
-            
 
-            
+            MySqlCommand cccommand = new MySqlCommand("UPDATE `users` set `Valutka`=`Valutka`+((@val*10)/100)  WHERE `id`=@id", db.GetConnection());
+            cccommand.Parameters.Add("@id", MySqlDbType.VarChar).Value = row.Cells[4].Value.ToString();
+            cccommand.Parameters.Add("@val", MySqlDbType.VarChar).Value = row.Cells[3].Value.ToString();
 
-            
+            if (status == "2")
+            {
+                return;
+            }
+            if (status == "1")
+            {
+                return;
+            }
+            if (status == "0")
+                return;
+
+
+            if (cccommand.ExecuteNonQuery() == 1)
+            {
+
+
+            }
+
+            else
+                MessageBox.Show("Ошибка");
+
+
+
+
+
+
 
             MySqlCommand scommand = new MySqlCommand("DELETE FROM `zapic` WHERE `id`=@id", db.GetConnection());
             scommand.Parameters.Add("@id", MySqlDbType.VarChar).Value = row.Cells[0].Value.ToString();
 
             status = row.Cells[6].Value.ToString();
-
-            if (status == "1")
+            if (status == "2")
             {
                 MessageBox.Show("Этот заказ нельзя оплатить");
+                if (label5.Visible == false)
+                    label5.Visible = true;
+                if (label2.Visible == false)
+                    label2.Visible = true;
+                if (label6.Visible == true)
+                    label6.Visible = false;
+                if (label8.Visible == true)
+                    label8.Visible = false;
                 return;
             }
-            if (status == "0")
-            {
-                MessageBox.Show("Этот заказ нельзя оплатить");
-                return;
-            }
+
+
+             if (status == "1")
+             {
+                    MessageBox.Show("Этот заказ нельзя оплатить");
+                    if (label5.Visible == false)
+                        label5.Visible = true;
+                    if (label2.Visible == false)
+                        label2.Visible = true;
+                    if (label6.Visible == true)
+                        label6.Visible = false;
+                    if (label8.Visible == true)
+                        label8.Visible = false;
+                    return;
+             }
+             if (status == "0")
+             {
+                    MessageBox.Show("Этот заказ нельзя оплатить");
+                    if (label5.Visible == false)
+                        label5.Visible = true;
+                    if (label2.Visible == false)
+                        label2.Visible = true;
+                    if (label6.Visible == true)
+                        label6.Visible = false;
+                    if (label8.Visible == true)
+                        label8.Visible = false;
+                    return;
+             }
+
+
+
+             if (scommand.ExecuteNonQuery() == 1)
+             {
+                    MessageBox.Show("Оплачено");
+                    if (label5.Visible == false)
+                        label5.Visible = true;
+                    if (label2.Visible == false)
+                        label2.Visible = true;
+                    if (label6.Visible == true)
+                        label6.Visible = false;
+                    if (label8.Visible == true)
+                        label8.Visible = false;
+                this.label4_Click(sender,e);
+             }
+                else
+                    MessageBox.Show("Ошибка");
+
+
+                db.closeConnection();
+
 
             
-
-            if (scommand.ExecuteNonQuery() == 1)
-                MessageBox.Show("Оплачено");
-            else
-                MessageBox.Show("Ошибка");
-
-            
-            db.closeConnection();
-
-
         }
     }
 }

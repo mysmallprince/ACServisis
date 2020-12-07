@@ -42,6 +42,9 @@ namespace AC_Servis
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.Valutka = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +52,9 @@ namespace AC_Servis
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.Valutka);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.id);
             this.panel1.Controls.Add(this.label2);
@@ -179,6 +185,33 @@ namespace AC_Servis
             this.label1.Text = "АвтоМех";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(12, 387);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(109, 27);
+            this.button7.TabIndex = 9;
+            this.button7.Text = "Пополнить баланс";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // Valutka
+            // 
+            this.Valutka.AutoSize = true;
+            this.Valutka.Location = new System.Drawing.Point(86, 371);
+            this.Valutka.Name = "Valutka";
+            this.Valutka.Size = new System.Drawing.Size(35, 13);
+            this.Valutka.TabIndex = 7;
+            this.Valutka.Text = "label3";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 371);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Ваш баланс:";
+            // 
             // AvtoMesh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,5 +243,8 @@ namespace AC_Servis
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button7;
+        public System.Windows.Forms.Label Valutka;
+        private System.Windows.Forms.Label label5;
     }
 }

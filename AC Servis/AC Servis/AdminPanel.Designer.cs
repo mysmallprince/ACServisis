@@ -34,7 +34,10 @@ namespace AC_Servis
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.Valutka = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -42,6 +45,9 @@ namespace AC_Servis
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -86,7 +92,13 @@ namespace AC_Servis
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.Valutka);
             this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.id);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel3);
@@ -101,6 +113,25 @@ namespace AC_Servis
             this.panel1.Size = new System.Drawing.Size(923, 450);
             this.panel1.TabIndex = 3;
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(12, 387);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(109, 27);
+            this.button7.TabIndex = 9;
+            this.button7.Text = "Пополнить баланс";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // Valutka
+            // 
+            this.Valutka.AutoSize = true;
+            this.Valutka.Location = new System.Drawing.Point(86, 371);
+            this.Valutka.Name = "Valutka";
+            this.Valutka.Size = new System.Drawing.Size(35, 13);
+            this.Valutka.TabIndex = 7;
+            this.Valutka.Text = "label3";
+            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(12, 420);
@@ -110,6 +141,15 @@ namespace AC_Servis
             this.button5.Text = "Выход из записи";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 371);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Ваш баланс:";
             // 
             // id
             // 
@@ -156,7 +196,6 @@ namespace AC_Servis
             this.button3.TabIndex = 1;
             this.button3.Text = "Выплата автомеханику";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -179,6 +218,38 @@ namespace AC_Servis
             this.button1.Text = "Заказы";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(532, 371);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(109, 27);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "Отменить";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Visible = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(283, 371);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(109, 27);
+            this.button8.TabIndex = 9;
+            this.button8.Text = "Пополнить";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Visible = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(397, 318);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(134, 43);
+            this.textBox1.TabIndex = 10;
+            this.textBox1.Visible = false;
             // 
             // AdminPanel
             // 
@@ -211,5 +282,11 @@ namespace AC_Servis
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button7;
+        public System.Windows.Forms.Label Valutka;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

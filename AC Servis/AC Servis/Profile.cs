@@ -13,6 +13,7 @@ namespace AC_Servis
 {
     public partial class Profile : Form
     {
+        public string valll;
         public string nameAv;
         public string ad;
         public string id1;
@@ -54,6 +55,7 @@ namespace AC_Servis
                 mainMenu.Show();
                 mainMenu.id.Text = id1;
                 mainMenu.admin = ad;
+                mainMenu.Valutka.Text = valll;
             }
 
             else if (ad == "1")
@@ -63,6 +65,7 @@ namespace AC_Servis
                 adminPanel.Show();
                 adminPanel.id.Text = id1;
                 adminPanel.admin = ad;
+                adminPanel.Valutka.Text = valll;
             }
             else if (ad == "2")
             {
@@ -72,6 +75,7 @@ namespace AC_Servis
                 avto.id.Text = id1;
                 avto.admin = ad;
                 avto.nameAv = nameAv;
+                avto.Valutka.Text = valll;
             }
             else
                 MessageBox.Show("Вы даун");

@@ -68,6 +68,12 @@
     <Compile Include="Avtomeshlist.Designer.cs">
       <DependentUpon>Avtomeshlist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Balance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Balance.Designer.cs">
+      <DependentUpon>Balance.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB.cs" />
     <Compile Include="Del.cs">
       <SubType>Form</SubType>
@@ -119,12 +125,6 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="Viplata.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Viplata.Designer.cs">
-      <DependentUpon>Viplata.cs</DependentUpon>
-    </Compile>
     <Compile Include="VzyatZakaz.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Avtomeshlist.resx">
       <DependentUpon>Avtomeshlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Balance.resx">
+      <DependentUpon>Balance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Del.resx">
       <DependentUpon>Del.cs</DependentUpon>
@@ -178,9 +181,6 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Viplata.resx">
-      <DependentUpon>Viplata.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VzyatZakaz.resx">
       <DependentUpon>VzyatZakaz.cs</DependentUpon>

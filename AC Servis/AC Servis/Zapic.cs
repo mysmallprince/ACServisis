@@ -13,6 +13,8 @@ namespace AC_Servis
 {
     public partial class Zapic : Form
     {
+        public string valll;
+        public string admin;
         public string id8;
         public Zapic()
         {
@@ -28,7 +30,7 @@ namespace AC_Servis
 
             DB db = new DB();
 
-            MySqlCommand command = new MySqlCommand("INSERT INTO `zapic` (`nameZ`, `uid`, `vidwork`, `mark`, `date`, `idAv`, `nameAv`, `Payment`,`Status`,`idAvu`) VALUES (@naz, @id, @vid, @marka, @data,'0','0','0','0','0')", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO `zapic` (`nameZ`, `uid`, `vidwork`, `mark`, `date`, `idAv`, `nameAv`, `Payment`,`Status`,`idAvu`, `idMen`) VALUES (@naz, @id, @vid, @marka, @data,'0','0','0','0','0','0')", db.GetConnection());
 
             command.Parameters.Add("@naz", MySqlDbType.VarChar).Value = nazv.Text;
             command.Parameters.Add("@id", MySqlDbType.VarChar).Value = label9.Text;
@@ -45,6 +47,8 @@ namespace AC_Servis
                 Menu mainMenu = new Menu();
                 mainMenu.Show();
                 mainMenu.id.Text = id8;
+                mainMenu.admin = admin;
+                mainMenu.Valutka.Text = valll;
 
             }
             else
@@ -84,6 +88,7 @@ namespace AC_Servis
             Menu mainMenu = new Menu();
             mainMenu.Show();
             mainMenu.id.Text = id8;
+            mainMenu.admin = admin;
         }
 
         private void label8_Click(object sender, EventArgs e)

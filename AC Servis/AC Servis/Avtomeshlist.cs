@@ -13,6 +13,7 @@ namespace AC_Servis
 {
     public partial class Avtomeshlist : Form
     {
+        public string valll;
         public string id;
         public string ad;
         public Avtomeshlist()
@@ -138,6 +139,7 @@ namespace AC_Servis
             adminPanel.Show();
             adminPanel.id.Text = id;
             adminPanel.admin = ad;
+            adminPanel.Valutka.Text = valll;
         }
     }
 }

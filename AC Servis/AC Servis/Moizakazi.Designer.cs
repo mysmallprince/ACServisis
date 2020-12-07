@@ -48,6 +48,7 @@ namespace AC_Servis
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -164,7 +165,8 @@ namespace AC_Servis
             this.Column4,
             this.Column6,
             this.Column5,
-            this.Column7});
+            this.Column7,
+            this.Column8});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridView1.Location = new System.Drawing.Point(109, 95);
             this.dataGridView1.Name = "dataGridView1";
@@ -228,6 +230,11 @@ namespace AC_Servis
             this.Column7.HeaderText = "Status";
             this.Column7.Name = "Column7";
             // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "idMen";
+            this.Column8.Name = "Column8";
+            // 
             // Moizakazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,5 +273,6 @@ namespace AC_Servis
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }

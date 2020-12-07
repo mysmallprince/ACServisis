@@ -13,6 +13,7 @@ namespace AC_Servis
 {
     public partial class MenZakazi : Form
     {
+        public string valll;
         public string ad;
         public string id1;
         public string id;
@@ -34,7 +35,7 @@ namespace AC_Servis
             DataTable table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `zapic`", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `zapic` WHERE `Status` = '0'", db.GetConnection());
             
             
             adapter.SelectCommand = command;
@@ -52,7 +53,7 @@ namespace AC_Servis
             List<string[]> data = new List<string[]>();
             while (reader.Read())
             {
-                data.Add(new string[8]);
+                data.Add(new string[10]);
                 data[data.Count - 1][0] = reader[0].ToString();
                 data[data.Count - 1][1] = reader[1].ToString();
                 data[data.Count - 1][2] = reader[2].ToString();
@@ -61,6 +62,8 @@ namespace AC_Servis
                 data[data.Count - 1][5] = reader[5].ToString();
                 data[data.Count - 1][6] = reader[6].ToString();
                 data[data.Count - 1][7] = reader[7].ToString();
+                data[data.Count - 1][8] = reader[9].ToString();
+                data[data.Count - 1][9] = reader[11].ToString();
             }
             reader.Close();
             foreach (string[] s in data)
@@ -138,7 +141,33 @@ namespace AC_Servis
             adminPanel.Show();
             adminPanel.id.Text = id1;
             adminPanel.admin = ad;
+            adminPanel.Valutka.Text = valll;
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dataGridView1.CurrentRow;
+
+            DB db = new DB();
+            DataTable table = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("UPDATE `zapic` set `Status`=@namz, `idMen`= @men WHERE `id`=@id", db.GetConnection());
+            command.Parameters.Add("@id", MySqlDbType.VarChar).Value = row.Cells[0].Value.ToString();
+            command.Parameters.Add("@namz", MySqlDbType.VarChar).Value = 1;
+            command.Parameters.Add("@men", MySqlDbType.VarChar).Value = id1;
+            db.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("Заказ одобрен");
+                this.label4_Click(sender, e);
+            }
+
+            else
+                MessageBox.Show("Ошибка");
+
+            db.closeConnection();
+        }
     }
 }
