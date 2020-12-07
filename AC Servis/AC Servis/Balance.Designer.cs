@@ -60,6 +60,7 @@ namespace AC_Servis
             this.bLogin.TabIndex = 2;
             this.bLogin.Text = "Пополнить";
             this.bLogin.UseVisualStyleBackColor = true;
+            this.bLogin.Click += new System.EventHandler(this.bLogin_Click);
             // 
             // balnc
             // 
@@ -68,6 +69,7 @@ namespace AC_Servis
             this.balnc.Name = "balnc";
             this.balnc.Size = new System.Drawing.Size(160, 30);
             this.balnc.TabIndex = 1;
+            this.balnc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.balnc_KeyPress);
             // 
             // panel2
             // 

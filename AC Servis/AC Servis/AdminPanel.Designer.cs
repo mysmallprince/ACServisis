@@ -45,9 +45,6 @@ namespace AC_Servis
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -92,9 +89,6 @@ namespace AC_Servis
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.Valutka);
             this.panel1.Controls.Add(this.button5);
@@ -219,38 +213,6 @@ namespace AC_Servis
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(532, 371);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(109, 27);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Отменить";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Visible = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(283, 371);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(109, 27);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "Пополнить";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Visible = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(397, 318);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 43);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Visible = false;
-            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,8 +247,5 @@ namespace AC_Servis
         private System.Windows.Forms.Button button7;
         public System.Windows.Forms.Label Valutka;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

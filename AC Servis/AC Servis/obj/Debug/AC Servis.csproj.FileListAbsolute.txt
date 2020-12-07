@@ -97,7 +97,6 @@ C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.A
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.MenZakazi.resources
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.AvtoMesh.resources
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.Avtomeshlist.resources
-C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.Viplata.resources
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.VzyatZakaz.resources
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.Moizakazi.resources
 C:\Users\student\Desktop\Киреев Илья\Popka\ACServisis\AC Servis\AC Servis\bin\Debug\AC Servis.exe.config
@@ -137,3 +136,4 @@ C:\Users\student\Desktop\Киреев Илья\Popka\ACServisis\AC Servis\AC Ser
 C:\Users\student\Desktop\Киреев Илья\Popka\ACServisis\AC Servis\AC Servis\obj\Debug\AC Servis.csproj.CopyComplete
 C:\Users\student\Desktop\Киреев Илья\Popka\ACServisis\AC Servis\AC Servis\obj\Debug\AC Servis.exe
 C:\Users\student\Desktop\Киреев Илья\Popka\ACServisis\AC Servis\AC Servis\obj\Debug\AC Servis.pdb
+C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.Balance.resources
