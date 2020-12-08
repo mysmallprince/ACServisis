@@ -84,5 +84,14 @@ namespace AC_Servis
             moizakazi.ad = admin;
             moizakazi.valll = Valutka.Text;
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Balance balance = new Balance();
+            balance.Show();
+            balance.id = id.Text;
+            balance.ad = admin;
+        }
     }
 }

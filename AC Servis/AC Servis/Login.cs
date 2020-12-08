@@ -13,7 +13,8 @@ namespace AC_Servis
 {
     public partial class Login : Form
     {
-        public string lol;
+        public string kek;
+        public int lol;
         public string admin;
         public Login()
         {
@@ -36,16 +37,19 @@ namespace AC_Servis
             MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login`=@uL AND `pass`=@uP AND `Admin` != 'NULL'", db.GetConnection());
             command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
             command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passUser;
-            
-            
+
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
-            if (table.Rows.Count == 0)
+            if (table.Rows.Count == 0
+                
+                )
             {
-                MessageBox.Show("Ты чё дебил, зарегайся");
+                MessageBox.Show("Такого аккаунта не существует");
                 return;
             }
+            
+            
             admin = table.Rows[0][6].ToString();
             if (table.Rows.Count > 0 && admin == "0")
             {

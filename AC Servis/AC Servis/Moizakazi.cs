@@ -163,6 +163,11 @@ namespace AC_Servis
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
             MySqlCommand command = new MySqlCommand("UPDATE `zapic` set `Status`=@val  WHERE `id`=@id", db.GetConnection());
+            if (table.Rows.Count == 0)
+            {
+                MessageBox.Show("Выберите заказ");
+                return;
+            }
             command.Parameters.Add("@id", MySqlDbType.VarChar).Value = row.Cells[0].Value.ToString();
             command.Parameters.Add("@val", MySqlDbType.VarChar).Value = 0;
 

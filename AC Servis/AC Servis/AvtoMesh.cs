@@ -80,5 +80,14 @@ namespace AC_Servis
             profile.nameAv = nameAv;
             profile.valll = Valutka.Text;
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Balance balance = new Balance();
+            balance.Show();
+            balance.ad = admin;
+            balance.id = id.Text;
+        }
     }
 }

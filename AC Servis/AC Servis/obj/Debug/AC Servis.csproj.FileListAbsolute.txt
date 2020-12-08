@@ -137,3 +137,4 @@ C:\Users\student\Desktop\Киреев Илья\Popka\ACServisis\AC Servis\AC Ser
 C:\Users\student\Desktop\Киреев Илья\Popka\ACServisis\AC Servis\AC Servis\obj\Debug\AC Servis.exe
 C:\Users\student\Desktop\Киреев Илья\Popka\ACServisis\AC Servis\AC Servis\obj\Debug\AC Servis.pdb
 C:\Users\fadie\source\repos\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.Balance.resources
+C:\Users\student\Desktop\Киреев Илья\Popka\ACServisis\AC Servis\AC Servis\obj\Debug\AC_Servis.Balance.resources
